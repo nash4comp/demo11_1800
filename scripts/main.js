@@ -130,7 +130,7 @@ function populateCardsDynamically() {
                 testHikeCard.querySelector('i').id = 'save-' + hikeID;
                 // this line will call a function to save the hikes to the user's document             
                 testHikeCard.querySelector('i').onclick = () => saveBookmark(hikeID);
-
+                testHikeCard.querySelector('.read-more').href = "eachHike.html?hikeName=" + hikeName + "&id=" + hikeID;
                 testHikeCard.querySelector('img').src = `./images/${hikeID}.jpg`;
                 hikeCardGroup.appendChild(testHikeCard);
             })
